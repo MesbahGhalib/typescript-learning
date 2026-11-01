@@ -4,13 +4,15 @@ const addTwo = (a: number, b: number) => {
 console.log(addTwo(2, 114));
 
 const str = "Mesbahghalib";
-const user: {
+
+type User = {
   name: string;
   age: number;
   isMarried: boolean;
   action: () => void;
   badges: String[];
-} = {
+};
+const user: User = {
   name: "Mesbah",
   age: 38,
   isMarried: true,
