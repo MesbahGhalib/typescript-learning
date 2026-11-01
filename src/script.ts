@@ -12,10 +12,20 @@ type User = {
   action: () => void;
   badges: String[];
 };
-const user: User = {
+
+interface IUser {
+  name: string;
+  age: number;
+  isMarried: boolean;
+  action: () => void;
+  badges: String[];
+}
+const user: IUser = {
   name: "Mesbah",
   age: 38,
   isMarried: true,
   action: () => console.log("hello"),
   badges: ["abc", "def"],
 };
+
+// interface
