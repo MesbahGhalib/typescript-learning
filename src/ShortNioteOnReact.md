@@ -190,4 +190,4 @@ State নিচে যায় ↓ Props দিয়ে
 
 Child উপরে জানায় ↑ Callback Function call করে
 
-সবচেয়ে গুরুত্বপূর্ণ পার্থক্য: Child থেকে Parent-এর Function call করাকে Callback Props pattern বলা যায়। আর সেই pattern ব্যবহার করে যখন State-কে Common Parent-এ রাখা হয়, তখন সেটি Lifting State Up। দুটো সম্পর্কিত, কিন্তু এক জিনিস নয়।
+সবচেয়ে গুরুত্বপূর্ণ পার্থক্য: Child থেকে Parent-এর Function call করাকে Callback Props pattern বলা যায়। আর সেই pattern ব্যবহার করে যখন State-কে Common Parent-এ রাখা হয়, তখন সেটি Lifting State Up। দুটো সম্পর্কিত, কিন্তু এক জিনিস নয়। ok
