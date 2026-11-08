@@ -184,7 +184,7 @@ Lifting State Up = Shared State-কে Common Parent-এ রাখা।
 4. Child Destructuring বা props দিয়ে সেগুলো receive করবে।
 5. Child Event ঘটলে Parent-এর Handler call করবে।
 6. Handler setState দিয়ে Parent-এর State update করবে।
-7. Parent Re-render হলে Child নতুন Prop পাবে এবং UI update হবে।
+7. Parent Re-render হলে Child নতুন Prop পাবে এবং UI update হবে।pok
 
 State নিচে যায় ↓ Props দিয়ে
 
