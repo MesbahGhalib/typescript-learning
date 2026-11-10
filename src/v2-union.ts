@@ -20,3 +20,8 @@ const describeUser = (user: User): string => {
 };
 
 console.log(describeUser(user));
+
+const getFirstItem = <T>(items: T[]): T | undefined => items[0];
+
+const firstTopic = getFirstItem(["String types", "Union types"]);
+console.log(firstTopic);
