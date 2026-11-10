@@ -1,5 +1,5 @@
-const greetings = () => {
-  console.log("Hello Mesbah Ghalib");
+const greetings = (name: string): void => {
+  console.log(`Hello ${name}`);
 };
 
-greetings();
+greetings("Mesbah Ghalib");
