@@ -25,3 +25,12 @@ const getFirstItem = <T>(items: T[]): T | undefined => items[0];
 
 const firstTopic = getFirstItem(["String types", "Union types"]);
 console.log(firstTopic);
+
+const isAdmin = (user: User): user is Admin => user.role === "admin";
+const users: User[] = [
+  user,
+  { id: 5678, role: "member", plans: ["starter"] },
+];
+const admins = users.filter(isAdmin);
+
+console.log(admins.map((admin) => admin.privileges.length));
