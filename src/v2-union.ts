@@ -10,3 +10,13 @@ type Member = { id: number; role: "member"; plans: string[] };
 type User = Admin | Member;
 
 const user: User = { id: 1234, privileges: ["cola", "sprite"], role: "admin" };
+
+const describeUser = (user: User): string => {
+  if (user.role === "admin") {
+    return `Admin ${user.id} has ${user.privileges.length} privileges`;
+  }
+
+  return `Member ${user.id} has ${user.plans.length} plans`;
+};
+
+console.log(describeUser(user));
