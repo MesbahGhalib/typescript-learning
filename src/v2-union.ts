@@ -46,3 +46,7 @@ interface Course {
 
 const currentCourse: Course = { title: "TypeScript Basics", lessonCount: 6 };
 console.log(`${currentCourse.title}: ${currentCourse.lessonCount} lessons`);
+
+type Profile = { nickname?: string };
+const displayNickname = (profile: Profile): string => profile.nickname ?? "Guest";
+console.log(displayNickname({}));
