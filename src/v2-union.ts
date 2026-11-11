@@ -38,3 +38,11 @@ console.log(admins.map((admin) => admin.privileges.length));
 type UserRole = User["role"];
 const allowedRoles: UserRole[] = ["admin", "member"];
 console.log(allowedRoles);
+
+interface Course {
+  title: string;
+  lessonCount: number;
+}
+
+const currentCourse: Course = { title: "TypeScript Basics", lessonCount: 6 };
+console.log(`${currentCourse.title}: ${currentCourse.lessonCount} lessons`);
