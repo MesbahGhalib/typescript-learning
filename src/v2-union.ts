@@ -57,3 +57,8 @@ type LookupResult =
 const formatLookup = (result: LookupResult): string =>
   result.success ? result.value : result.message;
 console.log(formatLookup({ success: false, message: "Course not found" }));
+
+const courseLevels = ["beginner", "intermediate", "advanced"] as const;
+type CourseLevel = (typeof courseLevels)[number];
+const selectedLevel: CourseLevel = "beginner";
+console.log(selectedLevel);
