@@ -34,3 +34,7 @@ const users: User[] = [
 const admins = users.filter(isAdmin);
 
 console.log(admins.map((admin) => admin.privileges.length));
+
+type UserRole = User["role"];
+const allowedRoles: UserRole[] = ["admin", "member"];
+console.log(allowedRoles);
