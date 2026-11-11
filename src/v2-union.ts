@@ -62,3 +62,7 @@ const courseLevels = ["beginner", "intermediate", "advanced"] as const;
 type CourseLevel = (typeof courseLevels)[number];
 const selectedLevel: CourseLevel = "beginner";
 console.log(selectedLevel);
+
+const getProperty = <T, K extends keyof T>(item: T, key: K): T[K] => item[key];
+const courseTitle = getProperty(currentCourse, "title");
+console.log(courseTitle);
