@@ -50,3 +50,10 @@ console.log(`${currentCourse.title}: ${currentCourse.lessonCount} lessons`);
 type Profile = { nickname?: string };
 const displayNickname = (profile: Profile): string => profile.nickname ?? "Guest";
 console.log(displayNickname({}));
+
+type LookupResult =
+  | { success: true; value: string }
+  | { success: false; message: string };
+const formatLookup = (result: LookupResult): string =>
+  result.success ? result.value : result.message;
+console.log(formatLookup({ success: false, message: "Course not found" }));
