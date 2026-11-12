@@ -40,3 +40,15 @@ const describePerson = (person: Student): string => {
 
 console.log(describePerson(student));
 console.log(describePerson(mentor));
+
+class CourseProgress {
+  constructor(public status: CourseStatus = CourseStatus.NotStarted) {}
+
+  complete(): void {
+    this.status = CourseStatus.Completed;
+  }
+}
+
+const progress = new CourseProgress();
+progress.complete();
+console.log(`Course status: ${progress.status}`);
