@@ -17,3 +17,16 @@ enum CourseStatus {
 
 const status: CourseStatus = CourseStatus.InProgress;
 console.log(`Course status: ${status}`);
+
+class Mentor extends Student {
+  constructor(name: string, public subject: string) {
+    super(name);
+  }
+
+  teach(): string {
+    return `${this.name} teaches ${this.subject}`;
+  }
+}
+
+const mentor = new Mentor("Alex", "TypeScript");
+console.log(mentor.teach());
