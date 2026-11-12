@@ -30,3 +30,13 @@ class Mentor extends Student {
 
 const mentor = new Mentor("Alex", "TypeScript");
 console.log(mentor.teach());
+
+const describePerson = (person: Student): string => {
+  if (person instanceof Mentor) {
+    return person.teach();
+  }
+  return person.introduce();
+};
+
+console.log(describePerson(student));
+console.log(describePerson(mentor));
