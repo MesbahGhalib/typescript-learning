@@ -7,6 +7,7 @@
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "bundler",
+    "experimentalDecorators": true,
     // Recommended Options
     "strict": true,
 
