@@ -78,3 +78,12 @@ console.log(enrollmentMessages["active"]);
 const formatIdentifier = (identifier: string | number): string =>
   typeof identifier === "number" ? identifier.toString() : identifier.trim();
 console.log(formatIdentifier(42));
+
+type VideoLesson = { title: string; videoUrl: string };
+type LiveLesson = { title: string; room: string };
+type Lesson = VideoLesson | LiveLesson;
+const describeLesson = (lesson: Lesson): string =>
+  "videoUrl" in lesson
+    ? `${lesson.title} is available at ${lesson.videoUrl}`
+    : `${lesson.title} meets in ${lesson.room}`;
+console.log(describeLesson({ title: "Union types", room: "Room 2" }));
