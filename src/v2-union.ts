@@ -115,3 +115,7 @@ type OperationResult<T, E = string> =
 const formatCourseResult = (result: OperationResult<Course>): string =>
   result.ok ? result.value.title : result.error;
 console.log(formatCourseResult({ ok: true, value: currentCourse }));
+
+type NonAdminRole = Exclude<UserRole, "admin">;
+const defaultMemberRole: NonAdminRole = "member";
+console.log(defaultMemberRole);
