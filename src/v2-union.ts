@@ -87,3 +87,19 @@ const describeLesson = (lesson: Lesson): string =>
     ? `${lesson.title} is available at ${lesson.videoUrl}`
     : `${lesson.title} meets in ${lesson.room}`;
 console.log(describeLesson({ title: "Union types", room: "Room 2" }));
+
+type LessonLoadState =
+  | { kind: "loading" }
+  | { kind: "loaded"; lessons: string[] }
+  | { kind: "failed"; message: string };
+const describeLoadState = (state: LessonLoadState): string => {
+  switch (state.kind) {
+    case "loading":
+      return "Lessons are loading";
+    case "loaded":
+      return `${state.lessons.length} lessons loaded`;
+    case "failed":
+      return state.message;
+  }
+};
+console.log(describeLoadState({ kind: "loaded", lessons: ["Unions"] }));
