@@ -66,3 +66,11 @@ console.log(selectedLevel);
 const getProperty = <T, K extends keyof T>(item: T, key: K): T[K] => item[key];
 const courseTitle = getProperty(currentCourse, "title");
 console.log(courseTitle);
+
+type EnrollmentStatus = "active" | "completed" | "paused";
+const enrollmentMessages: Record<EnrollmentStatus, string> = {
+  active: "Enrollment is active",
+  completed: "Course completed",
+  paused: "Enrollment is paused",
+};
+console.log(enrollmentMessages["active"]);
