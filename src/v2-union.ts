@@ -92,6 +92,9 @@ type LessonLoadState =
   | { kind: "loading" }
   | { kind: "loaded"; lessons: string[] }
   | { kind: "failed"; message: string };
+const assertNever = (value: never): never => {
+  throw new Error(`Unexpected value: ${value}`);
+};
 const describeLoadState = (state: LessonLoadState): string => {
   switch (state.kind) {
     case "loading":
@@ -100,6 +103,8 @@ const describeLoadState = (state: LessonLoadState): string => {
       return `${state.lessons.length} lessons loaded`;
     case "failed":
       return state.message;
+    default:
+      return assertNever(state);
   }
 };
 console.log(describeLoadState({ kind: "loaded", lessons: ["Unions"] }));
