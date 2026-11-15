@@ -108,3 +108,10 @@ const describeLoadState = (state: LessonLoadState): string => {
   }
 };
 console.log(describeLoadState({ kind: "loaded", lessons: ["Unions"] }));
+
+type OperationResult<T, E = string> =
+  | { ok: true; value: T }
+  | { ok: false; error: E };
+const formatCourseResult = (result: OperationResult<Course>): string =>
+  result.ok ? result.value.title : result.error;
+console.log(formatCourseResult({ ok: true, value: currentCourse }));
