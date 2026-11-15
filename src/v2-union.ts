@@ -123,3 +123,9 @@ console.log(defaultMemberRole);
 type SuccessfulLookup = Extract<LookupResult, { success: true }>;
 const getLookupValue = (result: SuccessfulLookup): string => result.value;
 console.log(getLookupValue({ success: true, value: "Union types found" }));
+
+const mixedTopics: (string | number)[] = ["Unions", 2, "Narrowing"];
+const topicNames = mixedTopics.filter(
+  (topic): topic is string => typeof topic === "string",
+);
+console.log(topicNames.join(", "));
