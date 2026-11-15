@@ -119,3 +119,7 @@ console.log(formatCourseResult({ ok: true, value: currentCourse }));
 type NonAdminRole = Exclude<UserRole, "admin">;
 const defaultMemberRole: NonAdminRole = "member";
 console.log(defaultMemberRole);
+
+type SuccessfulLookup = Extract<LookupResult, { success: true }>;
+const getLookupValue = (result: SuccessfulLookup): string => result.value;
+console.log(getLookupValue({ success: true, value: "Union types found" }));
