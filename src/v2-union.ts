@@ -74,3 +74,7 @@ const enrollmentMessages: Record<EnrollmentStatus, string> = {
   paused: "Enrollment is paused",
 };
 console.log(enrollmentMessages["active"]);
+
+const formatIdentifier = (identifier: string | number): string =>
+  typeof identifier === "number" ? identifier.toString() : identifier.trim();
+console.log(formatIdentifier(42));
