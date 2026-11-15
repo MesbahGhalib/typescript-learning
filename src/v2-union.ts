@@ -129,3 +129,8 @@ const topicNames = mixedTopics.filter(
   (topic): topic is string => typeof topic === "string",
 );
 console.log(topicNames.join(", "));
+
+type CurrentCourse = Course | null;
+const getCourseSummary = (course: CurrentCourse): string =>
+  course?.title ?? "No course selected";
+console.log(getCourseSummary(null));
