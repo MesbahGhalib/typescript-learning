@@ -140,3 +140,10 @@ const formatNumberGroup = (items: string[] | number[]): string =>
     ? items.join(" + ")
     : items.join(", ");
 console.log(formatNumberGroup([1, 2, 3]));
+
+type LessonArguments = [title: string] | [title: string, durationMinutes: number];
+const describeLessonArguments = (...args: LessonArguments): string =>
+  args.length === 2
+    ? `${args[0]} lasts ${args[1]} minutes`
+    : `${args[0]} has no scheduled duration`;
+console.log(describeLessonArguments("Union types", 20));
