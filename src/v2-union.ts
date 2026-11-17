@@ -152,3 +152,7 @@ type CourseCard = Pick<Course, "title"> | Pick<Course, "lessonCount">;
 const describeCourseCard = (card: CourseCard): string =>
   "title" in card ? card.title : `${card.lessonCount} lessons`;
 console.log(describeCourseCard({ lessonCount: 6 }));
+
+const withFallback = <T>(value: T | undefined, fallback: T): T =>
+  value === undefined ? fallback : value;
+console.log(withFallback<string | number>(undefined, "Untitled course"));
