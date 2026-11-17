@@ -134,3 +134,9 @@ type CurrentCourse = Course | null;
 const getCourseSummary = (course: CurrentCourse): string =>
   course?.title ?? "No course selected";
 console.log(getCourseSummary(null));
+
+const formatNumberGroup = (items: string[] | number[]): string =>
+  items.every((item): item is number => typeof item === "number")
+    ? items.join(" + ")
+    : items.join(", ");
+console.log(formatNumberGroup([1, 2, 3]));
