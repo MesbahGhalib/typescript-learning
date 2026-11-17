@@ -147,3 +147,8 @@ const describeLessonArguments = (...args: LessonArguments): string =>
     ? `${args[0]} lasts ${args[1]} minutes`
     : `${args[0]} has no scheduled duration`;
 console.log(describeLessonArguments("Union types", 20));
+
+type CourseCard = Pick<Course, "title"> | Pick<Course, "lessonCount">;
+const describeCourseCard = (card: CourseCard): string =>
+  "title" in card ? card.title : `${card.lessonCount} lessons`;
+console.log(describeCourseCard({ lessonCount: 6 }));
