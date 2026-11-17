@@ -156,3 +156,7 @@ console.log(describeCourseCard({ lessonCount: 6 }));
 const withFallback = <T>(value: T | undefined, fallback: T): T =>
   value === undefined ? fallback : value;
 console.log(withFallback<string | number>(undefined, "Untitled course"));
+
+type CoursePath = "/courses" | `/courses/${number}`;
+const selectedCoursePath: CoursePath = "/courses/2";
+console.log(selectedCoursePath);
