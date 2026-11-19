@@ -51,6 +51,19 @@
         outline-offset: 3px;
       }
 
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        padding: 0.5rem 1rem;
+        background: #fff;
+        transform: translateY(-200%);
+      }
+
+      .skip-link:focus {
+        transform: none;
+      }
+
       footer {
         padding: 0 1rem 2rem;
         color: #5b6475;
@@ -63,6 +76,7 @@
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#lessons-heading">Skip to lessons</a>
     <main>
       <h1>TypeScript Learning</h1>
       <p>
