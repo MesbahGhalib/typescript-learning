@@ -18,9 +18,10 @@
       }
 
       main {
+        box-sizing: border-box;
         width: min(100% - 2rem, 42rem);
-        margin: 4rem auto;
-        padding: 2rem;
+        margin: clamp(1rem, 5vw, 4rem) auto;
+        padding: clamp(1.25rem, 5vw, 2rem);
         background: #fff;
         border-radius: 1rem;
         box-shadow: 0 1rem 2.5rem rgb(23 32 51 / 8%);
