@@ -13,13 +13,49 @@
       content="Learn TypeScript step by step with Mesbah Ghalib."
     />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#f4f6fb" />
+    <meta
+      name="theme-color"
+      content="#f4f6fb"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#121826"
+      media="(prefers-color-scheme: dark)"
+    />
     <title>TypeScript Learning</title>
     <style>
+      :root {
+        color-scheme: light dark;
+        --page-background: #f4f6fb;
+        --text-color: #172033;
+        --surface-color: #fff;
+        --lesson-background: #f4f6fb;
+        --lesson-focus-background: #e7edfc;
+        --link-color: #2457c5;
+        --link-hover-color: #173b8c;
+        --focus-color: #2457c5;
+        --footer-color: #5b6475;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-background: #121826;
+          --text-color: #e5eaf4;
+          --surface-color: #1b2535;
+          --lesson-background: #253247;
+          --lesson-focus-background: #33445f;
+          --link-color: #a9c5ff;
+          --link-hover-color: #d0ddff;
+          --focus-color: #a9c5ff;
+          --footer-color: #b0bacb;
+        }
+      }
+
       body {
         margin: 0;
-        background: #f4f6fb;
-        color: #172033;
+        background: var(--page-background);
+        color: var(--text-color);
         font-family: system-ui, sans-serif;
         line-height: 1.6;
       }
@@ -29,7 +65,7 @@
         width: min(100% - 2rem, 42rem);
         margin: clamp(1rem, 5vw, 4rem) auto;
         padding: clamp(1.25rem, 5vw, 2rem);
-        background: #fff;
+        background: var(--surface-color);
         border-radius: 1rem;
         box-shadow: 0 1rem 2.5rem rgb(23 32 51 / 8%);
       }
@@ -45,12 +81,12 @@
       li {
         margin-block: 0.75rem;
         padding: 0.65rem 0.85rem;
-        background: #f4f6fb;
+        background: var(--lesson-background);
         border-radius: 0.5rem;
       }
 
       li:focus-within {
-        background: #e7edfc;
+        background: var(--lesson-focus-background);
       }
 
       li a {
@@ -58,15 +94,15 @@
       }
 
       a {
-        color: #2457c5;
+        color: var(--link-color);
       }
 
       a:hover {
-        color: #173b8c;
+        color: var(--link-hover-color);
       }
 
       a:focus-visible {
-        outline: 3px solid #2457c5;
+        outline: 3px solid var(--focus-color);
         outline-offset: 3px;
       }
 
@@ -76,7 +112,7 @@
         left: 1rem;
         top: 1rem;
         padding: 0.5rem 1rem;
-        background: #fff;
+        background: var(--surface-color);
         transform: translateY(-200%);
       }
 
@@ -86,7 +122,7 @@
 
       footer {
         padding: 0 1rem 2rem;
-        color: #5b6475;
+        color: var(--footer-color);
         text-align: center;
       }
 
