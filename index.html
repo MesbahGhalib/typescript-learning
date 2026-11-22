@@ -129,6 +129,43 @@
       footer p {
         margin: 0;
       }
+
+      @media print {
+        body {
+          background: #fff;
+          color: #000;
+        }
+
+        main {
+          width: auto;
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+        }
+
+        .skip-link {
+          display: none;
+        }
+
+        li {
+          break-inside: avoid;
+          background: transparent;
+        }
+
+        a {
+          color: inherit;
+        }
+
+        a::after {
+          content: " (" attr(href) ")";
+          font-size: 0.85em;
+        }
+
+        footer {
+          padding: 1.5rem 0 0;
+          color: inherit;
+        }
+      }
     </style>
   </head>
   <body>
