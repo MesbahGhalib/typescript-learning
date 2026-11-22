@@ -68,6 +68,7 @@
 
       .skip-link {
         position: absolute;
+        z-index: 1;
         left: 1rem;
         top: 1rem;
         padding: 0.5rem 1rem;
@@ -99,7 +100,7 @@
         advanced types.
       </p>
       <nav aria-labelledby="lessons-heading">
-        <h2 id="lessons-heading">Course lessons</h2>
+        <h2 id="lessons-heading" tabindex="-1">Course lessons</h2>
         <p>Explore the TypeScript source for each topic below.</p>
         <ol>
           <li><a href="./src/v1-module-config.ts">TypeScript configuration</a></li>
