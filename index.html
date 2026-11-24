@@ -131,6 +131,17 @@
         outline-offset: 3px;
       }
 
+      @media (forced-colors: active) {
+        main,
+        li {
+          border: 1px solid CanvasText;
+        }
+
+        a:focus-visible {
+          outline-color: Highlight;
+        }
+      }
+
       .skip-link {
         position: absolute;
         z-index: 1;
