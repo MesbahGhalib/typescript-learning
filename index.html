@@ -105,8 +105,10 @@
         background: var(--lesson-focus-background);
       }
 
-      li:hover {
-        background: var(--lesson-focus-background);
+      @media (hover: hover) and (pointer: fine) {
+        li:hover {
+          background: var(--lesson-focus-background);
+        }
       }
 
       li a {
