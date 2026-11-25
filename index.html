@@ -52,6 +52,7 @@
         --link-hover-color: #173b8c;
         --focus-color: #2457c5;
         --footer-color: #5b6475;
+        --divider-color: #d8deea;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -65,6 +66,7 @@
           --link-hover-color: #d0ddff;
           --focus-color: #a9c5ff;
           --footer-color: #b0bacb;
+          --divider-color: #3a4659;
         }
       }
 
@@ -167,7 +169,8 @@
       }
 
       footer {
-        padding: 0 1rem 2rem;
+        padding: 1rem 1rem 2rem;
+        border-top: 1px solid var(--divider-color);
         color: var(--footer-color);
         text-align: center;
       }
@@ -209,6 +212,7 @@
 
         footer {
           padding: 1.5rem 0 0;
+          border: 0;
           color: inherit;
         }
       }
