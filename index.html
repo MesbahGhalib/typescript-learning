@@ -35,10 +35,6 @@
         html {
           scroll-behavior: auto;
         }
-
-        li {
-          transition: none;
-        }
       }
 
       :root {
@@ -111,6 +107,12 @@
         background: var(--lesson-background);
         border-radius: 0.5rem;
         transition: background-color 160ms ease;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        li {
+          transition: none;
+        }
       }
 
       li:focus-within {
